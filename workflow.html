@@ -1,0 +1,122 @@
+<!-- Seth Coulter | July 22 2025 (Workflow) -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow – MJ Prompt Optimizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body class="bg-black text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-black/50 backdrop-blur-lg sticky top-0 z-50">
+       <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0">
+    <span class="text-lg font-bold">MJ Prompt Optimizer</span>
+    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-light text-center">
+        <a href="index.html#optimizer" class="hover:text-gray-300 transition-colors">Optimizer</a>
+        <a href="examples.html" class="hover:text-gray-300 transition-colors">Examples</a>
+        <a href="workflow.html" class="hover:text-gray-300 transition-colors">Workflow</a>
+        <a href="whyitworks.html" class="hover:text-gray-300 transition-colors">Why It Works</a>
+        <a href="about.html" class="hover:text-gray-300 transition-colors">About</a>
+    </div>
+</nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-8 py-12">
+
+        <div class="grid lg:grid-cols-3 gap-x-12">
+            <!-- Left Column -->
+            <div class="lg:col-span-1 relative">
+                <!-- Making the banner sticky within its column on large screens -->
+                <div class="lg:sticky top-24">
+                     <section class="banner text-center py-12 px-6 mb-12 lg:mb-0 radial-gradient-background">
+                        <h1 class="text-4xl xl:text-5xl font-bold">Our Workflow</h1>
+                        <p class="text-lg xl:text-xl text-gray-300 mx-auto mt-4">
+                            A simple, repeatable path from a basic idea to a perfect final render.
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:col-span-2">
+                <!-- Step 1: Optimize -->
+                <div class="step-card">
+                    <h3>Step 1: Copy & Optimize Your Prompt</h3>
+                    <p>Start by copying any Midjourney prompt or writing a simple idea. Paste it into our optimizer to get a structured, detailed version that gives the AI clear instructions.</p>
+                    <div class="grid md:grid-cols-2 gap-8 mt-6">
+                        <div>
+                            <div class="prompt-box">
+                                <strong>Original Prompt:</strong>
+                                Seven palm-sized golden orange tabby kittens in detailed bright orange ninja outfits forming a dramatic ninja circle... Cinematic lighting, anime-inspired Rasengan scene, epic vibe.
+                            </div>
+                            <img src="images/ex5.png" alt="Image generated from the original prompt showing ninja kittens." class="mt-4">
+                        </div>
+                        <div>
+                            <div class="prompt-box">
+                                <strong>Optimized Prompt:</strong>
+                                Foreground: Seven palm-sized golden orange tabby kittens... <br>Midground: A swirling sphere of blue-white energy... <br>Background: A subtly blurred, out-of-focus background... <br>Style: Photorealistic, cinematic lighting...
+                            </div>
+                            <img src="images/ex6.png" alt="Image generated from the optimized prompt, showing a more refined scene." class="mt-4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Refine -->
+                <div class="step-card">
+                    <h3>Step 2: Edit with Precision</h3>
+                    <p>Isolate elements you want to change using Midjourney's "Vary (Region)" tool. You can feed it a focused prompt to adjust that specific area, or generate a new asset on a transparent background to include in your edit.</p>
+                    <div class="prompt-box">
+                        <strong>Asset Generation Prompt:</strong>
+                        Rasengan, 8k resolution, photorealistic rendering style influenced by anime aesthetics, unreal engine, vibrant blue energy, bright core, translucent outer aura, dynamic motion, highly detailed, intricate swirling patterns.
+                    </div>
+                    <div class="image-grid">
+                        <img src="images/ex10.png" alt="Screenshot of the Midjourney interface showing the Vary (Region) tool being used.">
+                        <img src="images/ex7.png" alt="Screenshot of the Midjourney interface showing the Vary (Region) tool being used.">
+                        <img src="images/ex8.png" alt="A generated asset of a blue energy orb on a transparent background.">
+                    </div>
+                </div>
+                
+                <!-- Step 3: Rerun & Finalize -->
+                <div class="step-card">
+                    <h3 class="text-xl sm:text-2xl font-bold">Step 3: Rerun and Refine</h3>
+                    <p>Combine your original prompt, any edited references, and new assets to rerun the main scene. This integrates all your changes for a perfect final render. This process is about using AI as a tool to bring your specific vision to life.</p>
+                     <img src="images/ex9.png" alt="The final, polished image of the ninja kittens with the refined energy orb." class="mt-6">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-8 py-12 text-center text-gray-500 text-sm">
+        <p>Built for better prompts. © 2024</p>
+    </footer>
+
+    <script>
+        // Script for active navigation link highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href').split('/').pop().split('#')[0];
+                
+                if (currentPath === 'workflow.html' && linkPath === 'workflow.html') {
+                    link.classList.add('font-semibold', 'text-blue-400');
+                    link.classList.remove('hover:text-gray-300', 'font-light');
+                } else {
+                    link.classList.remove('font-semibold', 'text-blue-400');
+                    link.classList.add('hover:text-gray-300', 'font-light');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!-- Seth Coulter | July 22 2025 (About) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – MJ Prompt Optimizer</title>
+
+  <!-- Frameworks & Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- =====  NAV  ===== -->
+     <header class="bg-black/50 backdrop-blur-lg sticky top-0 z-50">
+       <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0">
+    <span class="text-lg font-bold">MJ Prompt Optimizer</span>
+    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-light text-center">
+        <a href="index.html#optimizer" class="hover:text-gray-300 transition-colors">Optimizer</a>
+        <a href="examples.html" class="hover:text-gray-300 transition-colors">Examples</a>
+        <a href="workflow.html" class="hover:text-gray-300 transition-colors">Workflow</a>
+        <a href="whyitworks.html" class="hover:text-gray-300 transition-colors">Why It Works</a>
+        <a href="about.html" class="hover:text-gray-300 transition-colors">About</a>
+    </div>
+</nav>
+    </header>
+
+
+  <!-- =====  MAIN  ===== -->
+  <main class="px-8">
+
+    <!-- Banner -->
+    <section class="banner radial-gradient-background">
+      <h1 class="text-5xl md:text-7xl font-bold">Hi — I’m Seth Coulter</h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Photographer, visual‑tech tinkerer, and the guy behind this prompt‑optimizer.</p>
+    </section>
+
+    <!-- Bio -->
+    <section class="py-16 scroll-animate opacity-0 translate-y-6 transition-all duration-700">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">My Visual Journey</h2>
+      <p class="mb-4">From studio‑lit ad sets in Los Angeles to forensic digs across the Pacific, I’ve spent the last decade chasing clarity through a lens. Along the way I’ve documented museum‑class prototypes at Canepa Automotive, shot Pepsi’s <em>Back to NFL</em> campaign, and earned top national honors for photo‑storytelling at the Defense POW/MIA Accounting Agency.</p>
+      <p>In 2022 I saw generative AI’s potential to super‑charge pre‑viz and concept pitches. Forty‑plus hours of sandboxing Midjourney V2 prompts later, I’d reverse‑engineered a structured format that turns “loose vibe” into laser‑precise images—now baked into the optimizer you’re using.</p>
+    </section>
+
+    <!-- Prompt Method (replaces Timeline area) -->
+    <section class="py-16 bg-[#111] border border-[#222] rounded-2xl scroll-animate opacity-0 translate-y-6 transition-all duration-700">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The Prompt Method I Built</h2>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Column 1 -->
+        <article class="p-6 bg-[#000] rounded-xl border border-[#333] h-full flex flex-col">
+          <h3 class="text-xl font-bold mb-2 text-blue-300">Slot &gt; Stuff</h3>
+          <p class="text-gray-300 text-sm">Use distinct headings—<strong>Foreground</strong>, <strong>Midground</strong>, <strong>Background</strong>, <strong>Style</strong>. These create clear “token islands” the AI can target without cross‑talk.</p>
+        </article>
+
+        <!-- Column 2 -->
+        <article class="p-6 bg-[#000] rounded-xl border border-[#333] h-full flex flex-col">
+          <h3 class="text-xl font-bold mb-2 text-blue-300">Constraint First</h3>
+          <p class="text-gray-300 text-sm">Front‑load objective details—camera, lens, lighting—before subjective mood. This stops stylistic overrides from bleeding into core composition.</p>
+        </article>
+
+        <!-- Column 3 -->
+        <article class="p-6 bg-[#000] rounded-xl border border-[#333] h-full flex flex-col">
+          <h3 class="text-xl font-bold mb-2 text-blue-300">Iterate in Minutes</h3>
+          <p class="text-gray-300 text-sm">Need just a lighting tweak? Swap that single slot and regenerate. The structured layout keeps every other aesthetic choice locked.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Callout -->
+    <section class="py-8 sm:py-12 text-center">
+      <div class="w-full max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Let’s Build Better Images</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-8">Whether you’re a brand team or an indie artist, I’m always up for talking shop, trading prompts, or collaborating on that next wild idea.</p>
+        <a href="mailto:sethac005@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-full transition-colors">Say Hello</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====  FOOTER  ===== -->
+  <footer class="container mx-auto px-8 py-12 text-center text-gray-500 text-sm">
+    <p>Built for better prompts. © 2024</p>
+  </footer>
+
+  <!-- =====  SCRIPTS  ===== -->
+  <script>
+    // Scroll‑in animation for sections
+    const reveal = document.querySelectorAll('.scroll-animate');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.remove('opacity-0', 'translate-y-6');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    reveal.forEach(el => io.observe(el));
+  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href').split('/').pop().split('#')[0]; // Get filename without hash
+                
+                // Special handling for index.html as its href is index.html#optimizer
+                if (currentPath === '' && linkPath === 'index.html') {
+                    link.classList.add('font-semibold', 'text-blue-400');
+                    link.classList.remove('hover:text-gray-300');
+                } else if (currentPath === linkPath) {
+                    link.classList.add('font-semibold', 'text-blue-400');
+                    link.classList.remove('hover:text-gray-300');
+                } else {
+                    link.classList.remove('font-semibold', 'text-blue-400');
+                    link.classList.add('hover:text-gray-300');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
